@@ -19,11 +19,12 @@ class CreateExercisesTable extends Migration {
 			$table->string('solution');
 			$table->float('round');
 			$table->float('error');
-			$table->int('check');
+			$table->boolean('check');
 			$table->timestamps();
 		});
 		Schema::create('variables', function(Blueprint $table) {
 			$table->increments('id');
+			$table->integer('exercise_id');
 			$table->foreign('exercise_id')->references('id')->on('exercises');
 			$table->string('name');
 			$table->float('min');
@@ -33,9 +34,10 @@ class CreateExercisesTable extends Migration {
 		});
 		Schema::create('hints', function(Blueprint $table) {
 			$table->increments('id');
+			$table->integer('exercise_id');
 			$table->foreign('exercise_id')->references('id')->on('exercises');
 			$table->string('text');
-			$table->int('order');
+			$table->integer('order');
 			$table->timestamps();
 		});
 	}
