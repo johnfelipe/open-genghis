@@ -52,10 +52,7 @@
 					Open Genghis
 				</h1>
 				<p>A Laravel/js/Semantic UI open source version of Genghis.</p>
-				<div class="large basic inverted animated fade ui button">
-					<div class="visible content">Come to ICU 2013</div>
-					<div class="hidden content">Register Now</div>
-				</div>
+
 			</div>
 		</div>
 	</div>
