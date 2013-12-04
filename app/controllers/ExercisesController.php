@@ -1,6 +1,6 @@
 <?php
 
-class ExercisesController extends \BaseController {
+class ExercisesController extends BaseController {
 
     /**
      * Display a listing of the resource.
@@ -9,7 +9,7 @@ class ExercisesController extends \BaseController {
      */
     public function index()
     {
-        echo "TEST";
+        return View::make('exercises.index');
     }
 
     /**
@@ -19,7 +19,7 @@ class ExercisesController extends \BaseController {
      */
     public function create()
     {
-        //
+        return View::make('exercises.create');
     }
 
     /**
@@ -40,7 +40,7 @@ class ExercisesController extends \BaseController {
      */
     public function show($id)
     {
-        //
+        return View::make('exercises.show');
     }
 
     /**
@@ -51,7 +51,7 @@ class ExercisesController extends \BaseController {
      */
     public function edit($id)
     {
-        //
+        return View::make('exercises.edit');
     }
 
     /**

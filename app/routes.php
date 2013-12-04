@@ -16,3 +16,6 @@ Route::get('/', function()
     return View::make('list');
 });
 
+
+
+Route::resource('exercises', 'ExercisesController');
