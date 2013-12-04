@@ -76,40 +76,17 @@
 </div>
 <div class="ui inverted teal page grid segment">
 	<div class="ten wide column">
-		<div class="ui three column stackable grid">
-			<div class="column">
-				<div class="ui header">Courses</div>
-				<div class="ui inverted link list">
-					<a class="item">Registration</a>
-					<a class="item">Course Calendar</a>
-					<a class="item">Professors</a>
-				</div>
-			</div>
-			<div class="column">
-				<div class="ui header">Library</div>
-				<div class="ui inverted link list">
-					<a class="item">A-Z</a>
-					<a class="item">Most Popular</a>
-					<a class="item">Recently Changed</a>
-				</div>
-			</div>
-			<div class="column">
-				<div class="ui header">Community</div>
-				<div class="ui inverted link list">
-					<a class="item">BBS</a>
-					<a class="item">Careers</a>
-					<a class="item">Privacy Policy</a>
-				</div>
-			</div>
-		</div>
+		
 	</div>
 	<div class="six wide right floated aligned column">
-		<h3 class="ui header">Contact Us</h3>
+		<h3 class="ui header">About</h3>
 		<addr>
-			237 Catberry Road <br>
-			Milton Keynes, London <br>
+			Juan Luis<br>
+			Spain<br>
 		</addr>
-		<p>(404) 867-5309</p>
+		<div class="ui inverted link list">
+			<a href="http://juanlu.is/" class="item">http://juanlu.is/</a>
+		</div>
 	</div>
 </div>
 </body>
