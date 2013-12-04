@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/semantic.css">
 	<link rel="stylesheet" type="text/css" href="./css/homepage.css">
 
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="./javascript/semantic.js"></script>
 	<script src="./javascript/homepage.js"></script>
 
@@ -21,32 +21,6 @@
 <body id="home">
 	<div class="ui inverted page grid masthead segment">
 		<div class="column">
-			<div class="inverted secondary pointing ui menu">
-				<div class="header item">Cat University</div>
-				<div class="right menu">
-					<div class="ui top right pointing mobile dropdown link item">
-						Menu
-						<i class="dropdown icon"></i>
-						<div class="menu">
-							<a class="item">Classes</a>
-							<a class="item">Cocktail Hours</a>
-							<a class="item">Community</a>
-						</div>
-					</div>
-					<div class="ui dropdown link item">
-						Courses
-						<i class="dropdown icon"></i>
-						<div class="menu">
-							<a class="item">Petting</a>
-							<a class="item">Feeding</a>
-							<a class="item">Mind Reading</a>
-						</div>
-					</div>
-					<a class="item">Library</a>
-					<a class="item">Community</a>
-				</div>
-			</div>
-
 			<div class="ui hidden transition information">
 				<h1 class="ui inverted header">
 					Open Genghis
@@ -58,7 +32,7 @@
 	</div>
 	<div class="ui page grid stackable segment">
 		
-		<div class="ten wide column">
+		<div class="sixteen wide column">
 			@yield('content')
 		</div>
 	</div>

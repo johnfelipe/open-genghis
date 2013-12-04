@@ -9,7 +9,13 @@ class ExercisesController extends BaseController {
      */
     public function index()
     {
-        return View::make('exercises.index');
+        $exercises = Exercise::all();
+
+       // foreach ($exercises as $key => $exercise) {
+         //   array_push($result, var)
+      //  }
+        return View::make('exercises.index')
+        ->with('exercises', $exercises);
     }
 
     /**
