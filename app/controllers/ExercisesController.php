@@ -22,7 +22,12 @@ class ExercisesController extends BaseController {
      */
     public function create()
     {
-        return View::make('exercises.create');
+        $exercise = new Exercise;
+        $exercice->title = "New exercise";
+        $exercice->save();
+        echo "<pre>";
+        print_r("POTATO");
+        echo "</pre>";
     }
 
     /**
