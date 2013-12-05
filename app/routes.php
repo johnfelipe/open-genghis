@@ -11,5 +11,11 @@
 |
  */
 
+Route::get('/', function()
+{
+    return Redirect::to('exercises');
+});
+
+
 
 Route::resource('exercises', 'ExercisesController');
