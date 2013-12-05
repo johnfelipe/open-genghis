@@ -11,9 +11,6 @@ class ExercisesController extends BaseController {
     {
         $exercises = Exercise::all();
 
-       // foreach ($exercises as $key => $exercise) {
-         //   array_push($result, var)
-      //  }
         return View::make('exercises.index')
         ->with('exercises', $exercises);
     }

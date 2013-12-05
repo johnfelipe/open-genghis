@@ -12,4 +12,4 @@
  */
 
 
-Route::resource('/', 'ExercisesController');
+Route::resource('exercises', 'ExercisesController');

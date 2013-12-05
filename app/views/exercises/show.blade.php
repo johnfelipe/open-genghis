@@ -1,1 +1,4 @@
-show.blade
+@extends('master')
+@section('content')
+Exercise
+@stop
