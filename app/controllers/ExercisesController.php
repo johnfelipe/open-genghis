@@ -22,12 +22,11 @@ class ExercisesController extends BaseController {
      */
     public function create()
     {
-        $exercise = new Exercise;
-        $exercice->title = "New exercise";
-        $exercice->save();
-        echo "<pre>";
-        print_r("POTATO");
-        echo "</pre>";
+        $newExercise = new Exercise;
+        $newExercise->title = "New exercise";
+        $newExercise->save();
+        $url = URL::action('ExercisesController@show', $newExercise->id);
+        return Redirect::to($url);
     }
 
     /**
@@ -48,7 +47,8 @@ class ExercisesController extends BaseController {
      */
     public function show($id)
     {
-        return View::make('exercises.show');
+        $exercise = Exercise::find($id);
+        return View::make('exercises.show')->with('exercise', $exercise);
     }
 
     /**

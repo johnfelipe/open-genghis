@@ -30,11 +30,6 @@
 		</div>
 	</div>
 	<div class="ui page grid stackable segment">
-		<div class="ten wide column">
-			<h1>Current Exercises</h1>
-			<h3>These are all the exercises in the database, click to edit!</h3>
-		</div>
-		<div class="sixteen wide column">
 			@yield('content')
 		</div>
 	</div>
