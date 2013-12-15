@@ -10,12 +10,19 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" type="text/css" href="./">
 	{{ HTML::style('css/semantic.css') }}
 	{{ HTML::style('css/homepage.css') }}
 	{{ HTML::script('http://code.jquery.com/jquery-latest.min.js') }}
 	{{ HTML::script('javascript/semantic.js') }}
 	{{ HTML::script('javascript/homepage.js') }}
+	{{ HTML::script('javascript/tinymce/jscripts/tiny_mce/tiny_mce.js')}}
+	{{ HTML::script('javascript/tinymce/jscripts/tiny_mce/plugins/asciimath/js/ASCIIMathMLwFallback.js')}}
+	<script type="text/javascript">
+		var AMTcgiloc = "http://www.imathas.com/cgi-bin/mimetex.cgi";  		//change me
+	</script>
+	<?php
+	include('tinymceinits.php');
+	?>
 </head>
 <body id="home">
 	<div class="ui inverted page grid masthead segment">
