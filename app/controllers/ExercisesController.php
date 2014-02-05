@@ -3,7 +3,7 @@
 class ExercisesController extends BaseController {
 
     /**
-     * Display a listing of the resource.
+     * List all the exercises.
      *
      * @return Response
      */
@@ -16,7 +16,7 @@ class ExercisesController extends BaseController {
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Initiates a new exercise in the DB and passes it to the show() function.
      *
      * @return Response
      */
@@ -70,7 +70,8 @@ class ExercisesController extends BaseController {
      */
     public function update($id)
     {
-        //
+        $exercise = Exercise::find($id);
+        $exercise->title = "";
     }
 
     /**
