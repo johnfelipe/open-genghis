@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html ng-app>
 <head>
 	<!-- Standard Meta -->
 	<meta charset="utf-8" />
@@ -17,6 +18,7 @@
 	{{ HTML::script('javascript/homepage.js') }}
 	{{ HTML::script('javascript/tinymce/jscripts/tiny_mce/tiny_mce.js')}}
 	{{ HTML::script('javascript/tinymce/jscripts/tiny_mce/plugins/asciimath/js/ASCIIMathMLwFallback.js')}}
+	{{ HTML::script('//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js')}}
 	<script type="text/javascript">
 		var AMTcgiloc = "http://www.imathas.com/cgi-bin/mimetex.cgi";  		//change me
 	</script>
@@ -25,17 +27,9 @@
 	?>
 </head>
 <body id="home">
-	<div class="ui inverted page grid masthead segment">
-		<div class="column">
-			<div class="ui hidden transition information">
-				<h1 class="ui inverted header">
-					Open Genghis
-				</h1>
-				<p>A Laravel/js/Semantic UI open source version of Genghis.</p>
-
-			</div>
-		</div>
-	</div>
+  <div>
+    @yield('banner')
+  </div>
 	<div class="ui page grid stackable segment">
 			@yield('content')
 		</div>

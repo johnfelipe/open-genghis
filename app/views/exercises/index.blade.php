@@ -1,4 +1,17 @@
 @extends('master')
+@section('banner')
+  <div class="ui inverted page grid masthead segment">
+    <div class="column">
+      <div class="ui hidden transition information">
+        <h1 class="ui inverted header">
+          Open Genghis
+        </h1>
+        <p>A Laravel/js/Semantic UI open source version of Genghis.</p>
+
+      </div>
+    </div>
+  </div>
+    @stop
 @section('content')
 <div class="ten wide column">
     <h1>Current Exercises</h1>

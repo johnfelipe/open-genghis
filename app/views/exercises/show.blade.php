@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
 <div class="sixteen wide column">
-	<h1>Exercise {{$exercise->id}}</h1>
+	<h1>Exercise {{$exercise->id}} @{{ngExerciseTitle}}</h1>
 	<div class="ten wide ui teal inverted segment">
 		<p>Remember everything will autosave every few seconds.</p>
 	</div>
@@ -12,7 +12,7 @@
 				<div class="ui segment">
 					<div class="field">
 						<label>Title</label>
-						<input type="text" name="title" placeholder="Write a new title for your exercise!" value="{{$exercise->title}}">
+						<input type="text" ng-model="ngExerciseTitle" ng-init="ngExerciseTitle='{{$exercise->title}}'" name="title" placeholder="Write a new title for your exercise!" value="{{$exercise->title}}">
 					</div>
 
 					<div class="field">
