@@ -19,16 +19,6 @@
 </div>
 <div class="sixteen wide column">
 
-
-	<div ng-controller="TestController" >
-		<button ng-click="myData.doClick(item, $event)">Send AJAX Request</button>
-		<br/>
-		Data from server: @{{myData.fromServer}}
-  	</div>
-
-
-
-
 	<a href="{{URL::action('ExercisesController@create')}}" class="ui green button float right">New text exercise</a>
 	<table ng-controller="TestController" class="ui teal table segment">
 		<thead>
