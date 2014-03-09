@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html>
 <head>
 	<!-- Standard Meta -->
 	<meta charset="utf-8" />
@@ -26,7 +26,7 @@
 	include('tinymceinits.php');
 	?>
 </head>
-<body id="home">
+<body id="home" ng-app="myapp">
   <div>
     @yield('banner')
   </div>
@@ -39,7 +39,7 @@
 </div>
 <div class="ui inverted teal page grid segment">
 	<div class="ten wide column">
-		
+
 	</div>
 	<div class="six wide right floated aligned column">
 		<h3 class="ui header">About</h3>
