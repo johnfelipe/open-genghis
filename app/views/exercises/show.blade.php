@@ -5,7 +5,7 @@
 	<div class="ten wide ui teal inverted segment">
 		<p>Remember everything will autosave every few seconds.</p>
 	</div>
-	<div class="ui form"> 
+	<div class="ui form">
 		<div class="ui grid">
 
 			<div class="eight wide column">
@@ -30,26 +30,52 @@
 			<div class="eight wide column">
 				<div class="ui segment">
 					<h2>Variables</h2>
-					<div class="ui three fields">
-						<div class="field">
-							<label>First name</label>
-							<input type="text" placeholder="First Name">
+					@foreach ($exercise->Variables as $variable)
+						<div ng-controller="VariableController" ng-hide="hiddenElements[{{$exercise->id}}]" class="ui five fields">
+							<div class="field">
+								<input type="text" placeholder="Name" value="{{$variable->name}}">
+							</div>
+							<div class="field">
+								<input type="number" placeholder="Minimun" value="{{$variable->min}}">
+							</div>
+							<div class="field">
+								<input type="number" placeholder="Maximun" value="{{$variable->max}}">
+							</div>
+							<div class="field">
+								<input type="number" placeholder="Step" value="{{$variable->step}}">
+							</div>
+							<div class="ui negative " id="{{$exercise->id}}"  ng-hide="hiddenElements[{{$exercise->id}}]" ng-click="myData.doClick({{$exercise->id}}, $event)"><i class="icon trash"></i></div>
 						</div>
-						<div class="field">
-							<label>Middle name</label>
-							<input type="text" placeholder="Middle Name">
-						</div>
-						<div class="field">
-							<label>Last name</label>
-							<input type="text" placeholder="Last Name">
-						</div>
-					</div>
-
+					@endforeach
 				</div>
 			</div>
 
 		</div>
 	</div> <!-- This is where the form ends -->
+	<script>
+		angular.module("myapp", [])
+       			 .controller("VariableController", function($scope, $http) {
+       			 	$scope.hiddenElements = {};
+		            	$scope.myData = {};
+		            	$scope.myData.doClick = function(item, event) {
+			                	var responsePromise = $http.post(item, $.param({
+			                		'_method':'put',
+			                		'test':'item'
+			                	})
+			                	,{headers : { 'Content-Type': 'application/x-www-form-urlencoded' }}
+			                	);
+
+			                	responsePromise.success(function(data, status, headers, config) {
+			                    		$scope.myData.fromServer = "Queried to update variables to id "+item;
+			                    		$scope.hiddenElements[item] = true;
+			                    		console.log($scope.hiddenElements);
+			                	});
+			                	responsePromise.error(function(data, status, headers, config) {
+			                    		console.log("Couldn't query exercise "+ item);
+			                	});
+			            }
+			} );
+	</script>
 </div>
 
 @stop

@@ -70,8 +70,10 @@ class ExercisesController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$exercise = Exercise::find($id);
-		$exercise->title = "";
+		$data = Input::all();
+		return Response::json(array('id' => $id, 'data' => $data));
+		//$exercise = Exercise::find($id);
+		//$exercise->title = "";
 	}
 
 	/**

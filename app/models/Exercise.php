@@ -7,9 +7,9 @@ class Exercise extends Eloquent {
 	protected $guarded = array();
 
 	public static $rules = array();
-	
+
 	public function variables()
     {
-        return $this->hasMany('Variable');
+        return $this->hasMany('Variable', 'exercise_id');
     }
 }
